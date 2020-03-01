@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Deutschkurs Präsentation</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section style="text-align: right; display: flex !important; justify-content: flex-end">
+					<h2 class="fragment fade-down">Tudors Tipps, wie man <span style="color: #42affa;">glücklicher</span> sein kann</h2>
+					<p class="fragment" style="filter: opacity(.5); font-size: 24px;">...eine sehr schöne Präsentation @Deutschkurs</p>
+				</section>
+				<section data-menu-title="Es gibt ein glücklich Tudor">
+					// TODO: Pic with me
+				</section>
+				<section>
+					<p>Na, jetzt, warum habe ich diese Präsentation gemacht?</p>
+					<img src="images/warum.gif" alt="Warum?" style="border: none;">
+				</section>
+				<section>
+					<p>Na, dann, beginnen wir mit den Tipps, oder?</p>
+				</section>
+				<section>
+					<section>
+						<div style="display: flex; align-items: center;">
+							<img src="images/tip_one.gif" alt="Tipp 1" style="border: none; width: 300px; margin-right: 3rem;">
+							<span>Es kann nichts so schlecht sein, dass es nicht auch für etwas gut ist</span>
+						</div>
+					</section>
+					<section>
+						<div style="display: flex; align-items: center;">
+							<img src="images/tip_two.gif" alt="Tipp 2" style="border: none; width: 300px; margin-right: 3rem;">
+							<span>Wir haben zu viel in unserem Leben zu tun, um Zeit zu haben, unglücklich zu sein</span>
+						</div>
+					</section>
+					<section>
+						<div style="display: flex; align-items: center;">
+							<img src="images/tip_three.gif" alt="Tipp 3" style="border: none; width: 300px; margin-right: 3rem;">
+							<span>Egal was schief geht, man kann es immer überwinden</span>
+						</div>
+					</section>
+				</section>
+				<section>
+					<p>Glücklich sein ist aber keine exakte Wissenschaft</p>		
+					<p class="fragment fade-down" style="filter: opacity(.5); font-size: 24px;">...und so, viel Spaß dabei :)</p>
+					<img src="images/science.gif" class="fragment fade-down" alt="Wissenschaft">
+				</section>
+				<section>
+					<p>Zum Schluss möchte ich, dass jeder einen Satz darüber sagt, was ihn glücklich macht.</p>
+					<p class="fragment fade-down" style="filter: opacity(.5); font-size: 24px;">...und natürlich könnte ich damit beginnen.</p>
+					<img src="images/happy.gif" class="fragment fade-down" style="border: none;" alt="Happy">
+				</section>
+				<section>
+					<h2>Jetzt, geh und <span style="color: #42affa;">sei glücklich</span>!</h2>
+					<img src="images/danke.gif" style="border: none;" alt="Danke" class="fragment fade-down">
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				hash: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js' },		
+					{ src: 'plugin/chalkboard/chalkboard.js' },					
+					{ src: 'node_modules/reveal.js-menu/menu.js' },
+					{ src: 'plugin/notes/notes.js', async: true }
+				],
+				menu: {
+					side: 'left',
+					width: 'normal',
+					numbers: false,
+					titleSelector: 'h1, h2, h3, h4, h5, h6, p, span',
+					useTextContentForMissingTitles: false,
+					hideMissingTitles: false,
+					markers: true,
+					custom: false,
+					themes: true,
+					themesPath: 'css/theme/',
+					transitions: true,
+					openButton: true,
+					openSlideNumber: false,
+					keyboard: true,
+					sticky: false,
+					autoOpen: true,
+					delayInit: false,
+					openOnInit: false,
+					loadIcons: true
+				},
+				chalkboard: {
+					toggleChalkboardButton: { left: "70px", bottom: "30px", top: "auto", right: "auto" },
+        			toggleNotesButton: { left: "110px", bottom: "30px", top: "auto", right: "auto" },
+				},
+				keyboard: {
+					67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+					66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+					46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+					8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+					68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
+					88: function() { RevealChalkboard.colorNext() },	// cycle colors forward when 'x' is pressed
+					89: function() { RevealChalkboard.colorPrev() },	// cycle colors backward when 'y' is pressed
+				},
+				progress: true,
+				controlsBackArrows: 'visible',
+				controlsTutorial: false,
+				navigationMode: 'default'
+			});
+		</script>
+	</body>
+</html>
